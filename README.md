@@ -30,7 +30,12 @@
     pip install -r requirements.txt
     ```
 
-4. Запустите Docker:
+4. Выполните миграции:
+    ```bash
+    docker-compose exec web python manage.py migrate
+    ```
+
+5. Запустите Docker:
     ```bash
     docker-compose up --build
     ```
@@ -39,10 +44,7 @@
     - **web**: ваше Django-приложение
     - **db**: база данных PostgreSQL
 
-5. Выполните миграции:
-    ```bash
-    docker-compose exec web python manage.py migrate
-    ```
+
 
 6. Приложение будет доступно по адресу: [http://localhost:8000](http://localhost:8000)
 
